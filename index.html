@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Stylish Portfolio - Start Bootstrap Template</title>
+  <title>Stoqup - Sweden</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,38 +26,24 @@
 <body id="page-top">
 
   <!-- Navigation -->
-  <a class="menu-toggle rounded" href="#">
-    <i class="fas fa-bars"></i>
-  </a>
-  <nav id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top">Home</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#about">About</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#services">Services</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Contact</a>
-      </li>
-    </ul>
+  <nav class="navbar navbar-expand-lg fixed-top py-3" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img id="logo" src="img/logo_new.png" alt="Stoqup logo"></a>
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
   </nav>
-
   <!-- Header -->
-  <header class="masthead d-flex">
+  <header class="masthead d-flex" id="home">
     <div class="container text-center my-auto">
-      <h1 class="mb-1">Stylish Portfolio</h1>
+      <img class="img-fluid" src="img/logo_new.png" alt="">
       <h3 class="mb-5">
-        <em>A Free Bootstrap Theme by Start Bootstrap</em>
+        <em>Olive oil packaging, made better</em>
       </h3>
       <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
     </div>
@@ -65,15 +51,18 @@
   </header>
 
   <!-- About -->
-  <section class="content-section bg-light" id="about">
+  <section class="wood-section bg-light" id="about">
     <div class="container text-center">
       <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-          <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-            <a href="https://unsplash.com/">Unsplash</a>!</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+        <div class="col-lg-5 mx-auto">
+          <h2>New innovative container for oil based products.</h2>
+          <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor. Quis blandit turpis cursus in hac. Adipiscing at in tellus integer feugiat scelerisque varius morbi. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. In fermentum et sollicitudin ac orci phasellus. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Aenean pharetra magna ac placerat. Ac turpis egestas integer eget aliquet nibh.
+            Nec ullamcorper sit amet risus nullam. Aliquam vestibulum morbi blandit cursus risus. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Dignissim sodales ut eu sem integer vitae justo eget magna. Quam pellentesque nec nam aliquam sem et tortor consequat. Consequat id porta nibh venenatis. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Augue lacus viverra vitae congue eu consequat ac felis donec. Sem viverra aliquet eget sit amet tellus cras adipiscing enim.</p>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
         </div>
+          <div class="col-lg-5 mx-auto">
+            <img class="img-fluid" src="img/cardboard.png" alt="">
+          </div>
       </div>
     </div>
   </section>
@@ -131,10 +120,8 @@
   <!-- Callout -->
   <section class="callout">
     <div class="container text-center">
-      <h2 class="mx-auto mb-5">Welcome to
-        <em>your</em>
-        next website!</h2>
-      <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
+      <h2 class="mx-auto mb-5">Want to sign up for news?</h2>
+      <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Sign up here!</a>
     </div>
   </section>
 
@@ -195,22 +182,13 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="content-section bg-primary text-white">
+  <section class="content-section bg-primary text-white" id="contact">
     <div class="container text-center">
       <h2 class="mb-4">The buttons below are impossible to resist...</h2>
       <a href="#!" class="btn btn-xl btn-light mr-4">Click Me!</a>
       <a href="#!" class="btn btn-xl btn-dark">Look at Me!</a>
     </div>
   </section>
-
-  <!-- Map -->
-  <div id="contact" class="map">
-    <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-    <br />
-    <small>
-      <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-    </small>
-  </div>
 
   <!-- Footer -->
   <footer class="footer text-center">
@@ -232,7 +210,6 @@
           </a>
         </li>
       </ul>
-      <p class="text-muted small mb-0">Copyright &copy; Your Website 2020</p>
     </div>
   </footer>
 

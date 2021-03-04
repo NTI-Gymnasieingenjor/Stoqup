@@ -179,6 +179,10 @@ h6 {
   transition: all 0.4s ease 0s;
 }
 
+#about {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-cardboard.png");
+}
+
 .menu-toggle {
   position: fixed;
   right: 15px;
@@ -373,3 +377,4 @@ a:hover, a:focus, a:active {
 .text-secondary {
   color: #ecb807 !important;
 }
+
