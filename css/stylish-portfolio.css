@@ -39,6 +39,21 @@ body {
   text-transform: uppercase;
 }
 
+.olive-section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.olive-sectionheading h2 {
+  font-size: 3rem;
+}
+
+.olive-section-heading h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+
 h1,
 h2,
 h3,
@@ -130,7 +145,7 @@ h6 {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: rgb(208,208,52);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -213,7 +228,7 @@ h6 {
 
 .service-icon {
   background-color: #fff;
-  color: #1D809F;
+  color: rgb(191,191,36);
   height: 7rem;
   width: 7rem;
   display: block;
@@ -224,7 +239,7 @@ h6 {
 
 .callout {
   padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -324,22 +339,22 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: rgb(208,208,52);
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 footer.footer .social-link:hover {
-  background-color: #155d74;
+  background-color: rgb(208,208,52);
   text-decoration: none;
 }
 
 a {
-  color: #1D809F;
+  color: rgb(208,208,52);
 }
 
 a:hover, a:focus, a:active {
-  color: #155d74;
+  color: rgb(191, 191, 36);
 }
 
 .btn-primary {
@@ -349,8 +364,8 @@ a:hover, a:focus, a:active {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #155d74 !important;
-  border-color: #155d74 !important;
+  background-color: rgb(191, 191, 36) !important;
+  border-color: rgb(191, 191, 36) !important;
 }
 
 .btn-secondary {
@@ -378,7 +393,7 @@ a:hover, a:focus, a:active {
 }
 
 .text-primary {
-  color: #1D809F !important;
+  color: rgb(208,208,52) !important;
 }
 
 .text-secondary {
