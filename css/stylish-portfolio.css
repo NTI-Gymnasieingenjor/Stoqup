@@ -336,8 +336,8 @@ a:hover, a:focus, a:active {
 }
 
 .btn-primary {
-  background-color: #1D809F !important;
-  border-color: #1D809F !important;
+  background-color: rgb(208, 208, 52) !important;
+  border-color: rgb(208, 208, 52) !important;
   color: #fff !important;
 }
 
@@ -367,7 +367,7 @@ a:hover, a:focus, a:active {
 }
 
 .bg-primary {
-  background-color: #1D809F !important;
+  background-color:rgb(208, 208, 52) !important;
 }
 
 .text-primary {
@@ -391,3 +391,40 @@ a:hover, a:focus, a:active {
   height: 50px;
 }
 
+.navbar .navbar-nav .nav-link:hover {
+  color: #000000;
+}
+@media only screen and (min-width: 960px) {
+  .navbar .navbar-nav .nav-link {
+    padding: 1em 0.7em;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar .navbar-brand {
+    padding: 0 0.7em;
+  }
+}
+.navbar .navbar-nav .nav-link {
+  position: relative;
+}
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #000000;
+  color: transparent;
+  width: 0%;
+  content: '';
+  height: 3px;
+  transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 65%;
+}
+
+.slogan {
+  font-size: 60px;
+}
