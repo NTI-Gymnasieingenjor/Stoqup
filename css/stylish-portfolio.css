@@ -417,7 +417,7 @@ a:hover, a:focus, a:active {
 }
 @media only screen and (min-width: 960px) {
   .navbar .navbar-nav .nav-link {
-    padding: 0.5em 0.7em;
+    padding: 1em 0.7em;
   }
   .navbar {
     padding: 0;
