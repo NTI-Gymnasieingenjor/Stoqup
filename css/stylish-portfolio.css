@@ -450,3 +450,7 @@ a:hover, a:focus, a:active {
 .slogan {
   font-size: 60px;
 }
+
+.infoText{
+  color: rgb(100, 100, 100);
+}
