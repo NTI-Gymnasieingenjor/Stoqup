@@ -77,3 +77,16 @@ $(".btn-close, .screen-overlay").click(function(e){
   $(".mobile-offcanvas").removeClass("show");
   $("body").removeClass("offcanvas-active");
 }); 
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if ($("#navbar_main").offset().top > 100) {
+      $("#navbar_main").addClass("navbar-scrolled");
+    } else {
+      $("#navbar_main").removeClass("navbar-scrolled");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
