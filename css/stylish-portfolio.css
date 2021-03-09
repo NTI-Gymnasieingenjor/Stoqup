@@ -451,4 +451,9 @@ a:hover, a:focus, a:active {
     visibility: visible;
     transform: translateX(0);
   }
+
+  #logo {
+    width: 220px;
+    height: 39px;
+  }
 }
