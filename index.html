@@ -28,21 +28,25 @@
 
 <body id="page-top">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top py-3 bg-light" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img id="logo" src="img/logo_new.png" alt="Stoqup logo"></a>
-            <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#product">Product</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#benefits">Benefits</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sign-up">Sign up</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                
-            </ul>
-        </div>
-    </div>
-  </nav>
+<b class="screen-overlay"></b>
+
+<button data-trigger="#navbar_main" class="d-lg-none btn btn-warning fixed-top" type="button"><i class="fas fa-bars"></i></i></button>
+
+<nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg fixed-top">
+  <div class="offcanvas-header">  
+    <button class="btn btn-danger btn-close float-right"> &times Close </button>
+    <h5 class="py-2 text-white">Main navbar</h5>
+  </div>
+  <a class="navbar-brand js-scroll-trigger ml-auto" href="#page-top"><img id="logo" src="img/logo_new.png" alt="Stoqup logo"></a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active"> <a class="nav-link js-scroll-trigger" href="#about">About </a> </li>
+    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#product"> Product </a></li>
+    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#benefits">Benefits</a></li>
+    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sign-up"> Sign-up </a></li>
+    <li class="nav-item active"> <a class="nav-link js-scroll-trigger" href="#contact">Contact </a> </li>
+  </ul>
+</nav>
+
 
   <!-- Header -->
   <header class="masthead d-flex">
@@ -206,29 +210,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer text-center">
-    <div class="container">
-      <ul class="list-inline mb-5">
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#!">
-            <i class="icon-social-facebook"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#!">
-            <i class="icon-social-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#!">
-            <i class="icon-social-github"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
     <i class="fas fa-angle-up"></i>
@@ -242,7 +223,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/stylish-portfolio.min.js"></script>
+  <script src="js/stylish-portfolio.js"></script>
 
 </body>
 

@@ -16,7 +16,7 @@
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 81
         }, 1000, "easeInOutExpo");
         return false;
       }
@@ -62,3 +62,31 @@ var onMapClickHandler = function(event) {
 }
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
+
+$("[data-trigger]").on("click", function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  var offcanvas_id =  $(this).attr('data-trigger');
+  $(offcanvas_id).toggleClass("show");
+  $('body').toggleClass("offcanvas-active");
+  $(".screen-overlay").toggleClass("show");
+}); 
+
+$(".btn-close, .screen-overlay").click(function(e){
+  $(".screen-overlay").removeClass("show");
+  $(".mobile-offcanvas").removeClass("show");
+  $("body").removeClass("offcanvas-active");
+}); 
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if ($("#navbar_main").offset().top > 100) {
+      $("#navbar_main").addClass("navbar-scrolled");
+    } else {
+      $("#navbar_main").removeClass("navbar-scrolled");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
