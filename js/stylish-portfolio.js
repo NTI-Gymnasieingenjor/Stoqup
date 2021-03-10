@@ -90,3 +90,8 @@ $(".btn-close, .screen-overlay").click(function(e){
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+
+  $('body').scrollspy({ 
+    target: '#navbar_main',
+    offset: 150
+});
