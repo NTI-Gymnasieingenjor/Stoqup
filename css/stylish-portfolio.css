@@ -461,3 +461,13 @@ a:hover, a:focus, a:active {
 .active {
   bottom: 3px;
 }
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgb(160, 160, 43); 
+  font-weight: 500;
+}
+
+.footer {
+  background-color:  rgb(100, 100, 100);
+  color: white;
+}
