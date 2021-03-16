@@ -461,3 +461,17 @@ a:hover, a:focus, a:active {
 .active {
   bottom: 3px;
 }
+
+.change-img{
+  height: 700px;
+  object-fit: cover;
+}
+
+.sign-up-content{
+  margin-bottom: 150px;
+}
+
+.sign-up-text{
+  color: black;
+  font-size: 50px;
+}
