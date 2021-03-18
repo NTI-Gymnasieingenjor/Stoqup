@@ -95,3 +95,14 @@ $(".btn-close, .screen-overlay").click(function(e){
     target: '#navbar_main',
     offset: 150
 });
+
+
+// Cookies
+$(document).ready(function(){   
+  setTimeout(function () {
+      $("#cookieConsent").fadeIn(200);
+   }, 1000);
+  $("#closeCookieConsent, .cookieConsentOK").click(function() {
+      $("#cookieConsent").fadeOut(200);
+  }); 
+}); 
