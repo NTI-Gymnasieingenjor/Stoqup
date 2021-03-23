@@ -106,3 +106,13 @@ $(document).ready(function(){
       $("#cookieConsent").fadeOut(200);
   }); 
 }); 
+
+// Sample sender
+function remove() {
+  var x = document.getElementById("sample-button");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
