@@ -458,10 +458,6 @@ a:hover, a:focus, a:active {
   }
 }
 
-.active {
-  bottom: 3px;
-}
-
 .change-img{
   height: 700px;
   object-fit: cover;
@@ -479,6 +475,7 @@ a:hover, a:focus, a:active {
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
   color: rgb(160, 160, 43); 
   font-weight: 500;
+  bottom: 3px;
 }
 
 .footer {
