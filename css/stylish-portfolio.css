@@ -175,6 +175,21 @@ h6 {
   background-color: rgb(100, 100, 100) !important;
   border-color: rgb(100, 100, 100) !important;
 }
+.feedback-icon{
+  background-color:white;
+  color: rgb(191,191,36);
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.feedback-icon:focus, .feedback-icon:checked{
+  background-color: rgb(100, 100, 100) !important;
+  border-color: rgb(100, 100, 100) !important;
+}
 
 .callout {
   padding: 15rem 0;

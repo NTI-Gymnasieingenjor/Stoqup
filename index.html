@@ -191,7 +191,7 @@
     </div>
   </div>
 </section>
-<section class="content-section bg-primary text-white" id="sample">
+
 <div id="carousel" class="carousel slide" data-ride="carousel" href="#sample">
   <ol class="carousel-indicators">
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -213,7 +213,6 @@
   </div>
   
   <div class="container">
-
     <div class="carousel-caption sample-content">
       <h1 class="carousel-heading sample-up-text">Follow our journey</h1>
       <a class="btn btn-primary btn-xl mt-4" id="sample-button" data-toggle="collapse" href="#sign-up-form" role="button" aria-expanded="false" aria-controls="sign-up-form" onclick="remove()" >
@@ -250,6 +249,7 @@
       </div>
     </div>
   </div>
+
   
   <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -260,6 +260,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 
   <!-- Call to Action -->
   <section class="content-section bg-primary text-white" id="contact">
@@ -291,7 +292,37 @@
       </div>
     </div>
   </section>
-
+  <!-- Feedback -->
+  <section class="content-section bg-primary text-white" id="feedback">
+    <div class="container text-center"  >
+      <h1 class="mb-4 infoText">Feedback</h1>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 ml-auto" id="feedback-button" data-toggle="collapse" href="#feedback-form" role="button" aria-expanded="false" aria-controls="feedback-form">
+            <span class="feedback-icon rounded-circle mx-auto mb-3" onclick="feedback()">
+              <i id="feedback-section" class="fa fa-thumbs-up"></i>
+          </span>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0 d-block mr-auto">
+            <span class="feedback-icon rounded-circle mx-auto mb-3" id="feedback-button" data-toggle="collapse" href="#feedback-form" role="button" aria-expanded="false" aria-controls="feedback-form">
+              <i class="fa fa-thumbs-down"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="collapse" id="feedback-form">
+      <div class="card card-body bg-primary">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+           <button type="submit" class="btn btn-light">Let us know what you think</button>
+        </form>
+      </div>
+    </div>
+  </section>
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
     <i class="fas fa-angle-up"></i>
