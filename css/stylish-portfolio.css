@@ -177,7 +177,6 @@ h6 {
 }
 .feedback-icon{
   background-color:white;
-  color: rgb(191,191,36);
   height: 7rem;
   width: 7rem;
   display: block;
@@ -186,9 +185,26 @@ h6 {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
-.feedback-icon:focus, .feedback-icon:checked{
-  background-color: rgb(100, 100, 100) !important;
-  border-color: rgb(100, 100, 100) !important;
+.fb-up:hover, .fb-up:focus, .fb-up:checked{
+  background-color: rgb(32, 141, 56) !important;
+  border-color: rgb(32, 141, 56) !important;
+}
+
+.fb-up {
+  background-color: rgb(32, 141, 56) !important;
+}
+
+.fb-down {
+  background-color: rgb(194, 41, 41) !important;
+}
+
+.fb-down:hover, .fb-down:focus, .fb-down:checked{
+  background-color: rgb(194, 41, 41) !important;
+  border-color: rgb(194, 41, 41) !important;
+}
+
+.card {
+  border: none;
 }
 
 .callout {
