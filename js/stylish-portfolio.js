@@ -116,3 +116,48 @@ function remove() {
     x.style.display = "none";
   }
 }
+// Feedback 
+var bigup = false;
+var bigdown = false;
+var showform = document.getElementById('feedform');
+function feedback(){
+  var x = document.getElementById("fb-up");
+  var y = document.getElementById("fb-down");
+
+  if(!bigup){
+    x.style.height = "8rem";
+    x.style.width = "8rem";
+    x.style.fontSize = "2.5rem";
+    y.style.height = "7rem";
+    y.style.width = "7rem";
+    y.style.fontSize = "2.25rem";
+    bigup = true;
+    bigdown = false;
+    showform.style.display = 'block';
+  } else{
+    x.style.height = "7rem";
+    x.style.width = "7rem";
+    x.style.fontSize = "2.25rem";
+    bigup = false
+  }
+}
+function feedbackdown(){
+  var y = document.getElementById("fb-down");
+  var x = document.getElementById("fb-up");
+  if(!bigdown){
+    y.style.height = "8rem";
+    y.style.width = "8rem";
+    y.style.fontSize = "2.5rem";
+    x.style.height = "7rem";
+    x.style.width = "7rem";
+    x.style.fontSize = "2.25rem";
+    bigdown = true;
+    bigup = false;
+    showform.style.display = 'block';
+  } else{
+    y.style.height = "7rem";
+    y.style.width = "7rem";
+    y.style.fontSize = "2.25rem";
+    bigdown = false
+  }
+}

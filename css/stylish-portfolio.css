@@ -177,11 +177,8 @@ h6 {
 }
 .feedback-icon{
   background-color:white;
-  height: 7rem;
-  width: 7rem;
   display: block;
   line-height: 7.5rem;
-  font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -189,13 +186,22 @@ h6 {
   background-color: rgb(32, 141, 56) !important;
   border-color: rgb(32, 141, 56) !important;
 }
+#feedform{
+  display: none;
+}
 
 .fb-up {
   background-color: rgb(32, 141, 56) !important;
+  height: 7rem;
+  width: 7rem;
+  font-size: 2.25rem;
 }
 
 .fb-down {
   background-color: rgb(194, 41, 41) !important;
+  height: 7rem;
+  width: 7rem;
+  font-size: 2.25rem;
 }
 
 .fb-down:hover, .fb-down:focus, .fb-down:checked{

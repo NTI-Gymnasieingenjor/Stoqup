@@ -301,19 +301,19 @@
       <h1 class="mb-4 infoText">Feedback</h1>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 ml-auto">
-            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3" data-toggle="collapse" href="#feedback-form" role="button" aria-expanded="false" aria-controls="feedback-form">
+            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3" id="fb-up"  href="#feedback-form" role="button"   onclick="feedback()" >
               <i id="feedback-section" class="fa fa-thumbs-up"></i>
           </span>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0 d-block mr-auto">
-            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3" id="feedback-button" data-toggle="collapse" href="#feedback-form" role="button" aria-expanded="false" aria-controls="feedback-form">
+            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3" id="fb-down"  href="#feedback-form" role="button"  onclick="feedbackdown()">
               <i class="fa fa-thumbs-down"></i>
             </span>
           </a>
         </div>
       </div>
     </div>
-    <div class="collapse" id="feedback-form">
+    <div id="feedform" >
       <div class="card card-body">
         <form>
           <div class="form-row">
