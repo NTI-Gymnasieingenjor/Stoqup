@@ -139,6 +139,7 @@ function feedback(){
     x.style.width = "7rem";
     x.style.fontSize = "2.25rem";
     bigup = false
+    showform.style.display = 'none';
   }
 }
 function feedbackdown(){
@@ -159,5 +160,6 @@ function feedbackdown(){
     y.style.width = "7rem";
     y.style.fontSize = "2.25rem";
     bigdown = false
+    showform.style.display = 'none';
   }
 }
