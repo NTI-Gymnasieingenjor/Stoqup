@@ -156,7 +156,7 @@ h6 {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
-.service-icon:hover, .service-icon:focus, .service-icon:active {
+.contact-icon:hover, .contact-icon:focus, .contact-icon:active {
   background-color: rgb(100, 100, 100) !important;
   border-color: rgb(100, 100, 100) !important;
 }
