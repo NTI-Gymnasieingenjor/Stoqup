@@ -424,6 +424,15 @@ a:hover, a:focus, a:active {
   font-size: 50px;
 }
 
+@media all and (max-width:600px){
+  .sample-up-text{
+    font-size: 30px;
+  }
+  .sample-content{
+    margin-bottom: 50px;
+  }
+}
+
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
   color: rgb(160, 160, 43); 
   font-weight: 500;
