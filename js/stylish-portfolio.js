@@ -128,9 +128,11 @@ function feedback(){
     x.style.height = "8rem";
     x.style.width = "8rem";
     x.style.fontSize = "2.5rem";
+    x.style.opacity = "100%";
     y.style.height = "7rem";
     y.style.width = "7rem";
     y.style.fontSize = "2.25rem";
+    y.style.opacity = "70%";
     bigup = true;
     bigdown = false;
     showform.style.display = 'block';
@@ -138,6 +140,7 @@ function feedback(){
     x.style.height = "7rem";
     x.style.width = "7rem";
     x.style.fontSize = "2.25rem";
+    y.style.opacity = "100%";
     bigup = false
     showform.style.display = 'none';
   }
@@ -149,9 +152,11 @@ function feedbackdown(){
     y.style.height = "8rem";
     y.style.width = "8rem";
     y.style.fontSize = "2.5rem";
+    y.style.opacity = "100%";
     x.style.height = "7rem";
     x.style.width = "7rem";
     x.style.fontSize = "2.25rem";
+    x.style.opacity ="60%";
     bigdown = true;
     bigup = false;
     showform.style.display = 'block';
@@ -159,6 +164,7 @@ function feedbackdown(){
     y.style.height = "7rem";
     y.style.width = "7rem";
     y.style.fontSize = "2.25rem";
+    x.style.opacity = "100%";
     bigdown = false
     showform.style.display = 'none';
   }
