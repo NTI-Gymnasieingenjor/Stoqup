@@ -116,6 +116,18 @@ function remove() {
     x.style.display = "none";
   }
 }
+// Thank you text
+function thankyou() {
+  var y = document.getElementById("sign-up-form")
+  var x = document.getElementById("thank-you");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none"
+  } else {
+    y.style.display = "none"
+    x.style.display = "block";
+  }
+}
 // Feedback 
 var bigup = false;
 var bigdown = false;
