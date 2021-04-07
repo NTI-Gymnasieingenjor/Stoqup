@@ -118,16 +118,32 @@ function remove() {
 }
 // Thank you text
 function thankyou() {
-  var y = document.getElementById("sign-up-form")
-  var x = document.getElementById("thank-you");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    y.style.display = "none"
-  } else {
-    y.style.display = "none"
-    x.style.display = "block";
+  let allAreFilled = true;
+  document.getElementById("sign-up-form").querySelectorAll("[required]").forEach(function(i) {
+    if (!allAreFilled) return;
+    if (!i.value) allAreFilled = false;
+    if (i.type === "radio") {
+      let radioValueCheck = false;
+      document.getElementById("sign-up-form").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+        if (r.checked) radioValueCheck = true;
+      })
+      allAreFilled = radioValueCheck;
+    }
+  })
+  if (!allAreFilled) {
+    console.log("fill filed");
+  }else{
+    var y = document.getElementById("sign-up-form")
+    var x = document.getElementById("thank-you");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none"
+    } else {
+      y.style.display = "none"
+      x.style.display = "block";
+    }
   }
-}
+};
 // Feedback 
 var bigup = false;
 var bigdown = false;
