@@ -132,52 +132,33 @@ function thankyou() {
     var y = document.getElementById("sign-up-form")
     var x = document.getElementById("thank-you");
     x.style.display === "none" ?(x.style.display = "block",y.style.display = "none") : (y.style.display = "none",x.style.display = "block");
-}
+  }
 };
 // Feedback 
-var bigup = false;
-var bigdown = false;
-var showform = document.getElementById('feedform');
-function feedback(){
-  var x = document.getElementById("fb-up");
-  var y = document.getElementById("fb-down");
-
-  if(!bigup){
-    x.style.height = "8rem";
-    x.style.width = "8rem";
-    x.style.fontSize = "2.5rem";
-    y.style.height = "7rem";
-    y.style.width = "7rem";
-    y.style.fontSize = "2.25rem";
-    bigup = true;
-    bigdown = false;
-    showform.style.display = 'block';
-  } else{
-    x.style.height = "7rem";
-    x.style.width = "7rem";
-    x.style.fontSize = "2.25rem";
-    bigup = false
-    showform.style.display = 'none';
-  }
-}
-function feedbackdown(){
-  var y = document.getElementById("fb-down");
-  var x = document.getElementById("fb-up");
-  if(!bigdown){
-    y.style.height = "8rem";
-    y.style.width = "8rem";
-    y.style.fontSize = "2.5rem";
-    x.style.height = "7rem";
-    x.style.width = "7rem";
-    x.style.fontSize = "2.25rem";
-    bigdown = true;
-    bigup = false;
-    showform.style.display = 'block';
-  } else{
-    y.style.height = "7rem";
-    y.style.width = "7rem";
-    y.style.fontSize = "2.25rem";
-    bigdown = false
-    showform.style.display = 'none';
-  }
-}
+function thumb(k,l){
+  var showform = document.getElementById('feedform');
+  k.style.height === "8rem" ? (
+    k.style.height = "7rem",
+    k.style.width = "7rem",
+    k.style.fontSize = "2.25rem",
+    showform.style.display = 'none',
+    console.log("nej iffen kom den till!")
+  ):
+  (
+    k.style.height = "8rem",
+    k.style.width = "8rem",
+    k.style.fontSize = "2.5rem",
+    l.style.height = "7rem",
+    l.style.width = "7rem",
+    l.style.fontSize = "2.25rem",
+    showform.style.display = 'block',
+    console.log("ja iffen kom den till!")
+  );
+};
+function feedback(rate){
+var x = document.getElementById("fb-up");
+var y = document.getElementById("fb-down");
+rate ? (k = x, l = y ):(k = y, l = x);
+console.log("det funkar men inte koden", k , l)
+thumb(k,l);
+};
