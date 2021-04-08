@@ -141,8 +141,7 @@ function thumb(k,l){
     k.style.height = "7rem",
     k.style.width = "7rem",
     k.style.fontSize = "2.25rem",
-    showform.style.display = 'none',
-    console.log("nej iffen kom den till!")
+    showform.style.display = 'none'
   ):
   (
     k.style.height = "8rem",
@@ -151,14 +150,12 @@ function thumb(k,l){
     l.style.height = "7rem",
     l.style.width = "7rem",
     l.style.fontSize = "2.25rem",
-    showform.style.display = 'block',
-    console.log("ja iffen kom den till!")
+    showform.style.display = 'block'
   );
 };
 function feedback(rate){
 var x = document.getElementById("fb-up");
 var y = document.getElementById("fb-down");
 rate ? (k = x, l = y ):(k = y, l = x);
-console.log("det funkar men inte koden", k , l)
 thumb(k,l);
 };
