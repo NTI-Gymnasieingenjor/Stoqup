@@ -110,11 +110,7 @@ $(document).ready(function(){
 // Sample sender
 function remove() {
   var x = document.getElementById("sample-button");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "none";
-  }
+  x.style.display === "block" ? x.style.display = "none": x.style.display = "none";
 }
 // Thank you text
 function thankyou() {
@@ -135,14 +131,8 @@ function thankyou() {
   }else{
     var y = document.getElementById("sign-up-form")
     var x = document.getElementById("thank-you");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      y.style.display = "none"
-    } else {
-      y.style.display = "none"
-      x.style.display = "block";
-    }
-  }
+    x.style.display === "none" ?(x.style.display = "block",y.style.display = "none") : (y.style.display = "none",x.style.display = "block");
+}
 };
 // Feedback 
 var bigup = false;
