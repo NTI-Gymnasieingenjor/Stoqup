@@ -141,12 +141,16 @@ function thumb(k,l){
     k.style.height = "7rem",
     k.style.width = "7rem",
     k.style.fontSize = "2.25rem",
+    k.style.opacity = "100%",
+    l.style.opacity = "100%",
     showform.style.display = 'none'
   ):
   (
     k.style.height = "8rem",
     k.style.width = "8rem",
     k.style.fontSize = "2.5rem",
+    k.style.opacity = "100%",
+    l.style.opacity = "60%",
     l.style.height = "7rem",
     l.style.width = "7rem",
     l.style.fontSize = "2.25rem",
