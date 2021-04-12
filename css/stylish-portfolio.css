@@ -145,6 +145,9 @@ h6 {
   background: #343a40;
 }
 
+.thank-you {
+  display: none;
+}
 .service-icon {
   background-color: #fff;
   color: rgb(191,191,36);

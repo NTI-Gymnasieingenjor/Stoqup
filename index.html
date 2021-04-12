@@ -220,32 +220,35 @@
         <a class="btn btn-primary btn-xl mt-4" id="sample-button" data-toggle="collapse" href="#sign-up-form" role="button" aria-expanded="false" aria-controls="sign-up-form" onclick="remove()" >
           Send me a sample
         </a>
+        <a class="btn btn-primary btn-xl col-md-4 offset-md-4 mt-4" id="thank-you" data-toggle="collapse"  href="#thankyou" aria-expanded="false" aria-controls="thankyou" style="display: none;" >
+          Thank you for the order!
+        </a>
         <div class="collapse" id="sign-up-form">
           <div class="card card-body bg-primary">
             <form>
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label for="inputName" class="infoText">Name</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname">
+                  <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" required>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4" class="infoText">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="example@">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="example@" required>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="formGroupExampleInput" class="infoText">Country</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Sweden">
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Sweden" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputAddress" class="infoText">Postal address and postal code</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Address and XXXXX">
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Address and XXXXX" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="formGroupExampleInput" class="infoText">Name of business</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Business Name">
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Business Name" required>
                 </div>
               </div>
-               <button type="submit" class="btn btn-light infoText">Order Sample</button>
+               <button id="check" type="button" class="btn btn-light infoText"onclick="thankyou()">Order Sample</button>
             </form>
           </div>
         </div>
@@ -301,12 +304,12 @@
       <h1 class="mb-4 infoText">Feedback</h1>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 ml-auto">
-            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-up"  href="#feedback-form" role="button"   onclick="feedback()" >
+            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-up"  href="#feedback-form" role="button"   onclick="feedback(true)" >
               <i id="feedback-section" class="fa fa-thumbs-up"></i>
           </span>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0 d-block mr-auto">
-            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-down"  href="#feedback-form" role="button"  onclick="feedbackdown()">
+            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-down"  href="#feedback-form" role="button"  onclick="feedback(false)">
               <i class="fa fa-thumbs-down"></i>
             </span>
           </a>

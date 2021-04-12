@@ -110,62 +110,56 @@ $(document).ready(function(){
 // Sample sender
 function remove() {
   var x = document.getElementById("sample-button");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "none";
-  }
+  x.style.display === "block" ? x.style.display = "none": x.style.display = "none";
 }
+// Thank you text
+function thankyou() {
+  let allAreFilled = true;
+  document.getElementById("sign-up-form").querySelectorAll("[required]").forEach(function(i) {
+    if (!allAreFilled) return;
+    if (!i.value) allAreFilled = false;
+    if (i.type === "radio") {
+      let radioValueCheck = false;
+      document.getElementById("sign-up-form").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+        if (r.checked) radioValueCheck = true;
+      })
+      allAreFilled = radioValueCheck;
+    }
+  })
+  if (!allAreFilled) {
+    console.log("fill filed");
+  }else{
+    var y = document.getElementById("sign-up-form")
+    var x = document.getElementById("thank-you");
+    x.style.display === "none" ?(x.style.display = "block",y.style.display = "none") : (y.style.display = "none",x.style.display = "block");
+  }
+};
 // Feedback 
-var bigup = false;
-var bigdown = false;
-var showform = document.getElementById('feedform');
-function feedback(){
-  var x = document.getElementById("fb-up");
-  var y = document.getElementById("fb-down");
-
-  if(!bigup){
-    x.style.height = "8rem";
-    x.style.width = "8rem";
-    x.style.fontSize = "2.5rem";
-    x.style.opacity = "100%";
-    y.style.height = "7rem";
-    y.style.width = "7rem";
-    y.style.fontSize = "2.25rem";
-    y.style.opacity = "70%";
-    bigup = true;
-    bigdown = false;
-    showform.style.display = 'block';
-  } else{
-    x.style.height = "7rem";
-    x.style.width = "7rem";
-    x.style.fontSize = "2.25rem";
-    y.style.opacity = "100%";
-    bigup = false
-    showform.style.display = 'none';
-  }
-}
-function feedbackdown(){
-  var y = document.getElementById("fb-down");
-  var x = document.getElementById("fb-up");
-  if(!bigdown){
-    y.style.height = "8rem";
-    y.style.width = "8rem";
-    y.style.fontSize = "2.5rem";
-    y.style.opacity = "100%";
-    x.style.height = "7rem";
-    x.style.width = "7rem";
-    x.style.fontSize = "2.25rem";
-    x.style.opacity ="60%";
-    bigdown = true;
-    bigup = false;
-    showform.style.display = 'block';
-  } else{
-    y.style.height = "7rem";
-    y.style.width = "7rem";
-    y.style.fontSize = "2.25rem";
-    x.style.opacity = "100%";
-    bigdown = false
-    showform.style.display = 'none';
-  }
-}
+function thumb(k,l){
+  var showform = document.getElementById('feedform');
+  k.style.height === "8rem" ? (
+    k.style.height = "7rem",
+    k.style.width = "7rem",
+    k.style.fontSize = "2.25rem",
+    k.style.opacity = "100%",
+    l.style.opacity = "100%",
+    showform.style.display = 'none'
+  ):
+  (
+    k.style.height = "8rem",
+    k.style.width = "8rem",
+    k.style.fontSize = "2.5rem",
+    k.style.opacity = "100%",
+    l.style.opacity = "60%",
+    l.style.height = "7rem",
+    l.style.width = "7rem",
+    l.style.fontSize = "2.25rem",
+    showform.style.display = 'block'
+  );
+};
+function feedback(rate){
+var x = document.getElementById("fb-up");
+var y = document.getElementById("fb-down");
+rate ? (k = x, l = y ):(k = y, l = x);
+thumb(k,l);
+};
