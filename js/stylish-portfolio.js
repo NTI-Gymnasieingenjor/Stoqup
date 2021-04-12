@@ -168,11 +168,5 @@ thumb(k,l);
 function feedbackresponse() {
   var y = document.getElementById("feedform")
   var x = document.getElementById("feedback-response");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    y.style.display = "none"
-  } else {
-    y.style.display = "none"
-    x.style.display = "block";
-  }
+  x.style.display === "none" ?(x.style.display = "block",y.style.display = "none") : (y.style.display = "none",x.style.display = "block");
 }
