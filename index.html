@@ -299,10 +299,10 @@
   </section>
   
   <!-- Feedback -->
-  <section class="content-section text-white" id="feedback">
+  <section class="content-section" id="feedback">
     <div class="container text-center">
       <h1 class="mb-4 infoText">Feedback</h1>
-      <div class="row">
+      <div class="row text-white">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 ml-auto">
             <span class="feedback-icon fb-up rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-up"  href="#feedback-form" role="button"   onclick="feedback(true)" >
               <i id="feedback-section" class="fa fa-thumbs-up"></i>
@@ -316,6 +316,12 @@
         </div>
       </div>
     </div>
+    
+    <div id="feedback-response" style="display: none;">
+      <center>
+      <p class="mt-5 comment-r">Thank you for your comment.</p>
+      </center>
+    </div>
     <div id="feedform" >
       <div class="card card-body">
         <form>
@@ -324,7 +330,7 @@
               <label for="exampleFormControlTextarea1" class="feedback-comment infoText">Feedback comment</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write a short explanation for your feedback here"></textarea>
             </div>
-           <button type="submit" class="btn btn-light bg-primary infoText" >Let us know what you think</button>
+           <button type="button" class="btn btn-light bg-primary infoText" onclick="feedbackresponse()">Let us know what you think</button>
         </form>
       </div>
     </div>
