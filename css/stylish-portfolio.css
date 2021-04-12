@@ -197,6 +197,20 @@ h6 {
   border-color: rgb(194, 41, 41) !important;
 }
 
+@media (min-width: 1280px) {
+  .feedbackbutton{
+    margin-left: 17.5%;
+  }
+}
+
+@media (max-width: 1279px) {
+  .feedbackbutton{
+    position: absolute;
+    top: 90%;
+    left: 20%;
+  }
+}
+
 .card {
   border: none;
 }
