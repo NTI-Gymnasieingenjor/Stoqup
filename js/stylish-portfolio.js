@@ -112,7 +112,7 @@ function remove() {
   var x = document.getElementById("sample-button");
   x.style.display === "block" ? x.style.display = "none": x.style.display = "none";
 }
-// Thank you text
+// Thank you text for sample order
 function thankyou() {
   let allAreFilled = true;
   document.getElementById("sign-up-form").querySelectorAll("[required]").forEach(function(i) {
@@ -163,3 +163,16 @@ var y = document.getElementById("fb-down");
 rate ? (k = x, l = y ):(k = y, l = x);
 thumb(k,l);
 };
+
+// Thank you text for feedback comment
+function feedbackresponse() {
+  var y = document.getElementById("feedform")
+  var x = document.getElementById("feedback-response");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none"
+  } else {
+    y.style.display = "none"
+    x.style.display = "block";
+  }
+}

@@ -493,3 +493,8 @@ a:hover, a:focus, a:active {
   background-color:rgb(180, 180, 46);
 }
 /*Cookie Consent End*/
+
+.comment-r{
+  font-size: 30px;
+  color: rgb(0, 92, 0)!important;
+}
