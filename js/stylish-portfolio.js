@@ -135,33 +135,24 @@ function thankyou() {
   }
 };
 // Feedback 
-function thumb(k,l){
+function thumb(k,l,d){
   var showform = document.getElementById('feedform');
-  k.style.height === "8rem" ? (
-    k.style.height = "7rem",
-    k.style.width = "7rem",
-    k.style.fontSize = "2.25rem",
-    k.style.opacity = "100%",
-    l.style.opacity = "100%",
-    showform.style.display = 'none'
-  ):
-  (
-    k.style.height = "8rem",
-    k.style.width = "8rem",
-    k.style.fontSize = "2.5rem",
-    k.style.opacity = "100%",
-    l.style.opacity = "60%",
-    l.style.height = "7rem",
-    l.style.width = "7rem",
-    l.style.fontSize = "2.25rem",
-    showform.style.display = 'block'
-  );
+
+    k.style.height = "8rem";
+    k.style.width = "8rem";
+    k.style.fontSize = "2.5rem";
+    showform.style.display = 'block';
+    d.parentNode.removeChild(d);
+    l.className = "col-md-4 offset-md-4";
+
 };
 function feedback(rate){
+var o = document.getElementById("fbu");
+var u = document.getElementById("fbd");
 var x = document.getElementById("fb-up");
 var y = document.getElementById("fb-down");
-rate ? (k = x, l = y ):(k = y, l = x);
-thumb(k,l);
+rate ? (k = x, l = o, d = u):(k = y, l = u, d = o);
+thumb(k,l,d);
 };
 
 // Thank you text for feedback comment
