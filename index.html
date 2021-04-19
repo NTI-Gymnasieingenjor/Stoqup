@@ -225,30 +225,30 @@
         </a>
         <div class="collapse" id="sign-up-form">
           <div class="card card-body bg-primary">
-            <form>
+            <form  action="connect.php" method="post">
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label for="inputName" class="infoText">Name</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" required>
+                  <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" required name="Name">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4" class="infoText">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="example@" required>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="example@" required name="Email">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="formGroupExampleInput" class="infoText">Country</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Sweden" required>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Sweden" required name="Country">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputAddress" class="infoText">Postal address and postal code</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Address and XXXXX" required>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Address and XXXXX" required name="Adress">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="formGroupExampleInput" class="infoText">Name of business</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Business Name" required>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Business Name" required name="Business">
                 </div>
               </div>
-               <button id="check" type="button" class="btn btn-light infoText"onclick="thankyou()">Order Sample</button>
+               <input id="check" type="submit" class="btn btn-light"onclick="thankyou()">
             </form>
           </div>
         </div>
