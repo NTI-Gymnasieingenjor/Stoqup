@@ -4,6 +4,7 @@
 <head>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ9K5BQYFN"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
@@ -225,30 +226,30 @@
         </a>
         <div class="collapse" id="sign-up-form">
           <div class="card card-body bg-primary">
-            <form  action="connect.php" method="post">
+            <form method="post" action="" onsubmit="return sampleform();">
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label for="inputName" class="infoText">Name</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" required name="Name">
+                  <input type="text" class="form-control" id="Name" placeholder="Firstname Lastname" required name="Name">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4" class="infoText">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="example@" required name="Email">
+                  <input type="email" class="form-control" id="Email" placeholder="example@" required name="Email">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="formGroupExampleInput" class="infoText">Country</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Sweden" required name="Country">
+                  <input type="text" class="form-control" id="Country" placeholder="Sweden" required name="Country">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputAddress" class="infoText">Postal address and postal code</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Address and XXXXX" required name="Adress">
+                  <input type="text" class="form-control" id="Address" placeholder="Address and XXXXX" required name="Adress">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="formGroupExampleInput" class="infoText">Name of business</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Business Name" required name="Business">
+                  <input type="text" class="form-control" id="Buisness" placeholder="Business Name" required name="Business">
                 </div>
               </div>
-               <input id="check" type="submit" class="btn btn-light"onclick="thankyou()">
+               <input id="check" type="submit" class="btn btn-light" onclick="thankyou()">
             </form>
           </div>
         </div>
@@ -319,7 +320,7 @@
     
     <div id="feedback-response" style="display: none;">
       <center>
-      <p class="mt-5 comment-r">Thank you for your comment.</p>
+      <p class="mt-5 comment-r">Thank you for your feedback</p>
       </center>
     </div>
     <div id="feedform" >

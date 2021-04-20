@@ -161,3 +161,38 @@ function feedbackresponse() {
   var x = document.getElementById("feedback-response");
   x.style.display === "none" ?(x.style.display = "block",y.style.display = "none") : (y.style.display = "none",x.style.display = "block");
 }
+
+function sampleform(){
+  console.log("hejdå")
+  var name = document.getElementById("Name").value;
+  var email = document.getElementById("Email").value;
+  var country = document.getElementById("Country").value;
+  var adress = document.getElementById("Address").value;
+  var buisness = document.getElementById("Buisness").value;
+  console.log("hej",
+  name,
+  email,
+  country,
+  adress,
+  buisness)
+  if (name && email && country && adress && buisness)
+  {
+    console.log("000000")
+    $.ajax
+    ({
+      type:'post',
+      url: 'connect.php',
+      data:{
+        Name:name,
+        Email:email,
+        Country:country,
+        Adress:adress,
+        Buisness:buisness
+      },
+      success: function(response){
+        console.log("Det funkade")
+      }
+    })
+  }
+  return false;
+};
