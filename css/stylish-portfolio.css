@@ -352,13 +352,20 @@ a:hover, a:focus, a:active {
   }
 }
 
-@media (max-width: 1279px) {
+@media only screen and (min-width: 989px) and (max-width: 1279px) {
+  #logo {
+    width: 220px;
+    height: 39px;
+  }
+}
+
+@media (max-width: 979px) {
   .d-lg-none {
     display: inline!important;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 980px) {
   #navbar_main {
     background-color: transparent;
     }
@@ -396,7 +403,7 @@ a:hover, a:focus, a:active {
   visibility:visible;
 }
 	
-@media all and (max-width:1279px) { 
+@media all and (max-width:979px) { 
 
  .offcanvas-header{ display:block; }
  
