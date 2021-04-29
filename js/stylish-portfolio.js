@@ -96,12 +96,20 @@ $(".btn-close, .screen-overlay").click(function(e){
     offset: 150
 });
 
+// Create cookie function
+function createCookie() {
+  Cookies.set('cookiesAccepted', 'true', { expires: 365 });
+}
 
-// Cookies
+// If cookie exists, don't display cookie popup
+$(document).ready (function AcceptedCookie() {
+  if(Cookies.get('cookiesAccepted') == 'true'){
+    $('#cookieConsent').css("display", "none");
+  }
+});
+
+// Cookie bar
 $(document).ready(function(){   
-  setTimeout(function () {
-      $("#cookieConsent").fadeIn(200);
-   }, 1000);
   $("#closeCookieConsent, .cookieConsentOK").click(function() {
       $("#cookieConsent").fadeOut(200);
   }); 
@@ -112,6 +120,7 @@ function remove() {
   var x = document.getElementById("sample-button");
   x.style.display === "block" ? x.style.display = "none": x.style.display = "none";
 }
+
 // Thank you text for sample order
 function thankyou() {
   let allAreFilled = true;
