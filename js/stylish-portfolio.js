@@ -135,7 +135,7 @@ function thankyou() {
   }
 };
 // Feedback 
-function thumb(k,l,d){
+function thumb(k,l,d,rate){
   var showform = document.getElementById('feedform');
 
     k.style.height = "8rem";
@@ -144,6 +144,7 @@ function thumb(k,l,d){
     showform.style.display = 'block';
     d.parentNode.removeChild(d);
     l.className = "col-md-4 offset-md-4";
+    return rate;
 
 };
 function feedback(rate){
@@ -152,7 +153,7 @@ var u = document.getElementById("fbd");
 var x = document.getElementById("fb-up");
 var y = document.getElementById("fb-down");
 rate ? (k = x, l = o, d = u):(k = y, l = u, d = o);
-thumb(k,l,d);
+thumb(k,l,d,rate);
 };
 
 // Thank you text for feedback comment
@@ -161,38 +162,3 @@ function feedbackresponse() {
   var x = document.getElementById("feedback-response");
   x.style.display === "none" ?(x.style.display = "block",y.style.display = "none") : (y.style.display = "none",x.style.display = "block");
 }
-
-function sampleform(){
-  console.log("hejdå")
-  var name = document.getElementById("Name").value;
-  var email = document.getElementById("Email").value;
-  var country = document.getElementById("Country").value;
-  var adress = document.getElementById("Address").value;
-  var buisness = document.getElementById("Buisness").value;
-  console.log("hej",
-  name,
-  email,
-  country,
-  adress,
-  buisness)
-  if (name && email && country && adress && buisness)
-  {
-    console.log("000000")
-    $.ajax
-    ({
-      type:'post',
-      url: 'connect.php',
-      data:{
-        Name:name,
-        Email:email,
-        Country:country,
-        Adress:adress,
-        Buisness:buisness
-      },
-      success: function(response){
-        console.log("Det funkade")
-      }
-    })
-  }
-  return false;
-};
