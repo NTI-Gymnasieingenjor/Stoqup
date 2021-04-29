@@ -99,12 +99,10 @@ $(".btn-close, .screen-overlay").click(function(e){
 // Create cookie function
 function createCookie() {
   Cookies.set('cookiesAccepted', 'true', { expires: 365 });
-  console.log("Cookie created!")
 }
 
 // If cookie exists, don't display cookie popup
 $(document).ready (function AcceptedCookie() {
-  console.log(Cookies.get('cookiesAccepted'))
   if(Cookies.get('cookiesAccepted') == 'true'){
     $('#cookieConsent').css("display", "none");
   }
