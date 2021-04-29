@@ -135,7 +135,7 @@ function thankyou() {
   }
 };
 // Feedback 
-function thumb(k,l,d){
+function thumb(k,l,d,rate){
   var showform = document.getElementById('feedform');
 
     k.style.height = "8rem";
@@ -144,6 +144,7 @@ function thumb(k,l,d){
     showform.style.display = 'block';
     d.parentNode.removeChild(d);
     l.className = "col-md-4 offset-md-4";
+    return rate;
 
 };
 function feedback(rate){
@@ -152,7 +153,7 @@ var u = document.getElementById("fbd");
 var x = document.getElementById("fb-up");
 var y = document.getElementById("fb-down");
 rate ? (k = x, l = o, d = u):(k = y, l = u, d = o);
-thumb(k,l,d);
+thumb(k,l,d,rate);
 };
 
 // Thank you text for feedback comment

@@ -4,6 +4,7 @@
 <head>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ9K5BQYFN"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
@@ -213,7 +214,6 @@
         <img class="d-block w-100 change-img" src="img/cardboard.png" alt="Third slide showing recycling">
       </div>
     </div>
-
     <div class="container">
       <div class="carousel-caption sample-content">
         <h1 class="carousel-heading sample-up-text">Follow our journey</h1>
@@ -225,30 +225,50 @@
         </a>
         <div class="collapse" id="sign-up-form">
           <div class="card card-body bg-primary">
-            <form  action="connect.php" method="post">
+            <script>
+              $(function() {
+
+                $('#sample').on('submit', function (e) {
+              
+                  e.preventDefault();
+              
+                  $.ajax({
+                   type: 'post',
+                   url: 'connect.php',
+                   data: $('form').serialize(),
+                   success: function () {
+                     console.log("Sample submited")
+                   }
+                 });
+              
+                });
+              
+              });
+            </script>
+            <form id="sample">
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label for="inputName" class="infoText">Name</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" required name="Name">
+                  <input type="text" class="form-control" id="Name" placeholder="Firstname Lastname" required name="Name">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4" class="infoText">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="example@" required name="Email">
+                  <input type="email" class="form-control" id="Email" placeholder="example@" required name="Email">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="formGroupExampleInput" class="infoText">Country</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Sweden" required name="Country">
+                  <input type="text" class="form-control" id="Country" placeholder="Sweden" required name="Country">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputAddress" class="infoText">Postal address and postal code</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Address and XXXXX" required name="Adress">
+                  <input type="text" class="form-control" id="Address" placeholder="Address and XXXXX" required name="Adress">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="formGroupExampleInput" class="infoText">Name of business</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Business Name" required name="Business">
+                  <input type="text" class="form-control" id="Business" placeholder="Business Name" required name="Business">
                 </div>
               </div>
-               <input id="check" type="submit" class="btn btn-light"onclick="thankyou()">
+               <input id="check" type="submit" class="btn btn-light" onclick="thankyou()">
             </form>
           </div>
         </div>
@@ -299,42 +319,63 @@
   </section>
   
   <!-- Feedback -->
+  <script>
+    $(function() {
+
+      $('#feedback').on('submit', function (e) {
+  
+        e.preventDefault();
+    
+        $.ajax({
+         type: 'post',
+         url: 'feedback.php',
+         data: $('#feedback').serialize(),
+         success: function () {
+           console.log("feedback submited")
+         }
+       });
+    
+      });
+    
+    });
+  </script>
+  <form id="feedback">
   <section class="content-section" id="feedback">
     <div class="container text-center">
       <h1 class="mb-4 infoText">Feedback</h1>
       <div class="row text-white">
         <div class="col-lg-3 col-md-6 mb-5 ml-auto" id="fbu">
-            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-up"  href="#feedback-form" role="button"   onclick="feedback(true)" >
+            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-up"  href="#feedback-form" role="button" name="UporDown"  onclick="feedback(true)" >
               <i id="feedback-section" class="fa fa-thumbs-up"></i>
           </span>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 d-block mr-auto" id="fbd" >
-            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-down"  href="#feedback-form" role="button"  onclick="feedback(false)">
+            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-down" href="#feedback-form" role="button" name="UporDown" onclick="feedback(false)">
               <i class="fa fa-thumbs-down"></i>
             </span>
           </a>
         </div>
       </div>
     </div>
-    
     <div id="feedback-response" style="display: none;">
       <center>
-      <p class="mt-5 comment-r">Thank you for your comment.</p>
+      <p class="mt-5 comment-r">Thank you for your feedback</p>
       </center>
     </div>
     <div id="feedform" >
       <div class="card card-body">
-        <form>
+        
           <div class="form">
             <div class="form-group col-md-8 mx-auto">
               <label for="exampleFormControlTextarea1" class="feedback-comment infoText">Feedback comment</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write a short explanation for your feedback here"></textarea>
+              <input class="form-control" id="Comment" rows="3" type="text" placeholder="Write a short explanation for your feedback here" required name="Comment">
             </div>
-           <button type="button" class="btn btn-light bg-primary infoText feedbackbutton" onclick="feedbackresponse()">Let us know what you think</button>
-        </form>
+           <input type="submit" id="check" class="btn btn-light bg-primary infoText feedbackbutton" onclick="feedbackresponse()" value = "Let us know what you think">
+        
       </div>
     </div>
   </section>
+</form>
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
     <i class="fas fa-angle-up"></i>
