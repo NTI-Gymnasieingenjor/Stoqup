@@ -54,11 +54,11 @@
 <b class="screen-overlay"></b>
 
 
-<button data-trigger="#navbar_main" class="d-lg-none btn btn-warning fixed-top bg-primary" type="button"><i class="fas fa-bars"></i></i></button>
+<button data-trigger="#navbar_main" class="d-lg-none btn btn-warning fixed-top" type="button"><i class="fas fa-bars"></i></i></button>
 
 <div id="cookieConsent">
   <div id="closeCookieConsent">x</div>
-  <h5>Cookie Consent</h5>By continuing to browse or by clicking ‘Accept’, you agree to the storing of cookies on your device to enhance your site experience and for analytical purposes. To learn more about how we use the cookies, please see our cookies policy. <a href="#" target="_blank">Cookie Policy</a>. <a class="cookieConsentOK infoText">Accept</a>
+  <h5>Cookie Consent</h5>By continuing to browse or by clicking ‘Accept’, you agree to the storing of cookies on your device to enhance your site experience and for analytical purposes. To learn more about how we use the cookies, please see our cookies policy. <a href="#" target="_blank">Cookie Policy</a>. <a class="cookieConsentOK infoText" onclick="createCookie()">Accept</a>
 </div>
 
 <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg fixed-top navbar-light">
@@ -349,6 +349,9 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.js"></script>
+
+  <!-- Cookie script-->
+  <script src="js.cookie.js"></script>
 
 <footer class="footer py-5">
   <center>
