@@ -105,15 +105,15 @@ function createCookie() {
 $(document).ready (function AcceptedCookie() {
   if(Cookies.get('cookiesAccepted') == 'true'){
     $('#cookieConsent').css("display", "none");
+  } else {
+    setTimeout(function () {
+      $("#cookieConsent").fadeIn(800);
+   }, 1000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function() {
+        $("#cookieConsent").fadeOut(400);
+    }); 
   }
 });
-
-// Cookie bar
-$(document).ready(function(){   
-  $("#closeCookieConsent, .cookieConsentOK").click(function() {
-      $("#cookieConsent").fadeOut(200);
-  }); 
-}); 
 
 // Sample sender
 function remove() {
