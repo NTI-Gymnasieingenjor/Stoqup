@@ -146,14 +146,15 @@ function thankyou() {
 // Feedback 
 function thumb(k,l,d,rate){
   var showform = document.getElementById('feedform');
-
+  var review = "Rating";
     k.style.height = "8rem";
     k.style.width = "8rem";
     k.style.fontSize = "2.5rem";
     showform.style.display = 'block';
     d.parentNode.removeChild(d);
     l.className = "col-md-4 offset-md-4";
-    return rate;
+    rate == true ? (review = "Positive") :(review = "Negative");
+    document.getElementById("UporDown").value = review;
 
 };
 function feedback(rate){

@@ -345,12 +345,12 @@
       <h1 class="mb-4 infoText">Feedback</h1>
       <div class="row text-white">
         <div class="col-lg-3 col-md-6 mb-5 ml-auto" id="fbu">
-            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-up"  href="#feedback-form" role="button" name="UporDown"  onclick="feedback(true)" >
+            <span class="feedback-icon fb-up rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-up"  href="#feedback-form" role="button" onclick="feedback(true)" >
               <i id="feedback-section" class="fa fa-thumbs-up"></i>
           </span>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 d-block mr-auto" id="fbd" >
-            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-down" href="#feedback-form" role="button" name="UporDown" onclick="feedback(false)">
+            <span class="feedback-icon fb-down rounded-circle mx-auto mb-3 d-flex justify-content-center align-items-center" id="fb-down" href="#feedback-form" role="button" onclick="feedback(false)">
               <i class="fa fa-thumbs-down"></i>
             </span>
           </a>
@@ -368,6 +368,7 @@
           <div class="form">
             <div class="form-group col-md-8 mx-auto">
               <label for="exampleFormControlTextarea1" class="feedback-comment infoText">Feedback comment</label>
+              <input id="UporDown" name="UporDown" style="display: none;">
               <input class="form-control" id="Comment" rows="3" type="text" placeholder="Write a short explanation for your feedback here" required name="Comment">
             </div>
            <input type="submit" id="check" class="btn btn-light bg-primary infoText feedbackbutton" onclick="feedbackresponse()" value = "Let us know what you think">
